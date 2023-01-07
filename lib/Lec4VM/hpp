@@ -1,0 +1,7 @@
+/**
+ * 这个文件是库给外部包含的总头文件
+ */
+
+#pragma once
+
+#include "cpp"

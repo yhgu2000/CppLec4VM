@@ -1,0 +1,36 @@
+0: Call main 0
+1: Exit
+2: Label main
+3: Cst(5)
+4: Call fact 1
+5: Ret 0
+6: Label fact
+7: Var(0)
+8: IFZERO __else__13
+9: Var(0)
+10: Var(1)
+11: Cst(-1)
+12: Add
+13: Call fact 1
+14: Mul
+15: GOTO __exit__13
+16: Label __else__13
+17: Cst(1)
+18: Label __exit__13
+19: Ret 1
+0: Call 4 0
+3: Exit
+4: Cst(5)
+6: Call 5 1
+9: Ret 0
+11: Var(0)
+13: IFZERO 15
+15: Var(0)
+17: Var(1)
+19: Cst(-1)
+21: Add
+22: Call -11 1
+25: Mul
+26: GOTO 4
+28: Cst(1)
+30: Ret 1

@@ -1,0 +1,19 @@
+/**
+ * 这个文件中定义C++代码的兼容性宏
+ */
+
+#pragma once
+
+#ifdef _MSC_VER
+#define DLL_IMPORT __declspec( dllimport )
+#define DLL_EXPORT __declspec( dllexport )
+#else
+#define DLL_IMPORT
+#define DLL_EXPORT
+#endif
+
+#ifdef _LIBRARY
+#define _EXPORT DLL_EXPORT
+#else
+#define _EXPORT DLL_IMPORT
+#endif

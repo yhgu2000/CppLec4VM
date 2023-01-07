@@ -1,0 +1,16 @@
+build
+
+# 环境解耦
+env.cmake
+
+# Qt Creator
+**/*.user
+**/*.res
+**/*.autosave
+**/.qt_for_python/
+**/build-**/
+
+# Visual Studio
+.vs
+out
+CMakeSettings.json
