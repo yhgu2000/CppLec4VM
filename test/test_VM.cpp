@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Lec4VM/VM.hpp"
 #include "project.h"
 #include "util.hpp"

@@ -17,7 +17,7 @@ public:
 
   // exception interface
 public:
-  virtual const char* what() const override { return ERR_WHAT(Err); }
+  virtual const char* what() const noexcept override { return ERR_WHAT(Err); }
 };
 
 namespace err {
@@ -39,7 +39,7 @@ public:
 
   // exception interface
 public:
-  virtual const char* what() const override { return _what.c_str(); }
+  virtual const char* what() const noexcept override { return _what.c_str(); }
 };
 
 class InvalidInstr : public Err
@@ -55,7 +55,10 @@ public:
 
   // exception interface
 public:
-  virtual const char* what() const override { return ERR_WHAT(InvalidInstr); }
+  virtual const char* what() const noexcept override
+  {
+    return ERR_WHAT(InvalidInstr);
+  }
 
   // Err interface
 public:
@@ -77,7 +80,10 @@ public:
 
   // exception interface
 public:
-  virtual const char* what() const override { return ERR_WHAT(CodeOutOfBound); }
+  virtual const char* what() const noexcept override
+  {
+    return ERR_WHAT(CodeOutOfBound);
+  }
 
   // Err interface
 public:
@@ -99,7 +105,7 @@ public:
 
   // exception interface
 public:
-  virtual const char* what() const override
+  virtual const char* what() const noexcept override
   {
     return ERR_WHAT(StackOutOfBound);
   }
@@ -113,11 +119,12 @@ class CallerUnderflow : public Err
 {
   // exception interface
 public:
-  virtual const char* what() const override
+  virtual const char* what() const noexcept override
   {
     return ERR_WHAT(CallerUnderflow);
   }
 };
 
 }
+
 }

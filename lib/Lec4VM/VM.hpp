@@ -83,7 +83,7 @@ public:
    */
   bool set_pc(std::size_t pc) noexcept
   {
-    return pc >= _code->size() ? false : _pc = _codeBegin + pc, true;
+    return pc >= _code->size() ? false : (_pc = _codeBegin + pc, true);
   }
 
   /**
