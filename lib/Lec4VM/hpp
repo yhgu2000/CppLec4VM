@@ -5,3 +5,6 @@
 #pragma once
 
 #include "cpp"
+
+#include "Err.hpp"
+#include "VM.hpp"

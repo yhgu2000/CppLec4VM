@@ -9,6 +9,9 @@
 
 namespace Lec4VM {
 
+/**
+ * @brief 字节码解释器/虚拟机
+ */
 class VM
 {
 public:
