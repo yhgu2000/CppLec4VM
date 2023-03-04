@@ -15,6 +15,9 @@ if(NOT Boost_USE_STATIC_LIBS)
   add_compile_definitions(BOOST_TEST_DYN_LINK)
 endif()
 
+# ccov & ccov-all
+add_code_coverage_all_targets()
+
 
 
 #
@@ -38,3 +41,5 @@ target_link_libraries(test_VM PRIVATE test_util Lec4VM)
 target_compile_definitions(test_VM PRIVATE BOOST_TEST_MODULE=VM)
 
 add_test(NAME test_VM COMMAND test_vm)
+
+target_code_coverage(test_VM AUTO ALL)

@@ -25,6 +25,10 @@ set(EXPORT_TARGETS ${PROJECT_NAME}Targets)
 # 设置调试配置后缀
 set(CMAKE_DEBUG_POSTFIX "-d")
 
+# 启用测试覆盖率分析
+include(code-coverage)
+add_code_coverage()
+
 
 
 # 代码
